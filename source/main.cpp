@@ -34,13 +34,14 @@ int main() {
     double free_space_gb = (double)free_space / (1024 * 1024 * 1024);  
 
     // Print info (CPU and GPU are hardcoded and you can change them here)
-        cout << R"(
+        cout << "\033[35m" << R"(
    _  __ ____ _      __  ____      __        __ 
   / |/ // __/| | /| / / / __/___  / /_ ____ / / 
  /    /_\ \  | |/ |/ / / _/ / -_)/ __// __// _ \
 /_/|_//___/  |__/|__/ /_/   \__/ \__/ \__//_//_/
                                                 
-)" << '\n';
+)" << '\n' << "\033[0m";
+    cout << "------------------------------------------------" << endl;
     cout << "HOS Version: " << (int)major << "." << (int)minor << "." << (int)micro << endl;
     if (hosversionIsAtmosphere()) {
         cout << "Atmosphere is active and loaded!" << endl;
